@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rent a Car</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link href="./RentACar.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="Header-section">
+    <div class="row-sm-1">
+        <div class="col-md-3">
+            <a href="RENTA.html"><img src="./Pictures/renta.png" alt="RENTA" class="logo"></a>
+        </div>
+        <div class="col-md-7">
+          <nav class="navbar navbar-default" style="background: none;border: none;padding-top: 10px;">
+            <div class="container-fluid" style="color: white;background: none;">
+              <ul class="nav navbar-nav" >
+                <li>
+                  <div class="dropdown">
+                    <button class="dropbtn"><b>PRODUCTS</b>
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <button class="dropdown-btn">Cars
+                        <i class="fa fa-caret-down"></i>
+                      </button>
+                      <div class="dropdown-container">
+                        <a href="./Find_car.html">Find Car</a>
+                        <a href="#" data-toggle="modal" data-target="#SignUp_options">Rent a Car</a>
+                      </div>                        
+                      <a href="#">Houses</a>
+                      <a href="#">Generators</a>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                <div class="dropdown">
+                    <button class="dropbtn"><b>SERVICES</b>
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="./Find_car.html" target="_self">Man Power</a>
+                      <a href="#">IT service</a>
+                    </div>
+                  </div>
+                </li>
+                <li><a href="#" style="color: black;"><b>CONTACT US</b></a></li>
+                <li><a href="#" style="color: black;"><b>MORE</b></a></li>
+              </ul>
+            </div>
+          </nav>
+          <script>
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+
+            for (i = 0; i < dropdown.length; i++) {
+              dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                  dropdownContent.style.display = "none";
+                } else {
+                  dropdownContent.style.display = "block";
+                }
+              });
+            }
+          </script>
+        </div>
+        <div class="col-md-2">
+          <div class="btns">
+            <button onclick="document.getElementById('SignUp_options').style.display='block'" class="register"><b>Signup</b></button>
+            <button onclick="document.getElementById('loginpage').style.display='block'" class="login"><b>Login</b></button>           
+          </div>
+        </div>
+      </div>
+  </div>
+  <div id="SignUp_options" class="modal">
+    <form class="modal-content animate "  action="#" method="post">
+        <button class="Btn" onclick="signupcancel()"><i class="fa fa-close"></i></button>
+      <h2 class="signlabel">SignUp<br><br>
+      <img src="./Pictures/signup.jpg" alt="Singup Logo" class="signup_logo"></h2>
+      <div class="container signup-btns" style="width: auto;">
+        <button type="submit" class="indi_signup"  onclick="parent.open('./IndividualSignUp.html')" target="_blank">Individial SignUp</button>
+        <button type="submit" class="Busi_signup"  onclick="parent.open('./BusinessSignup.html')" target="_blank">Business SignUp</button>
+      </div>
+    </form>
+    
+  </div>
+  <script>
+    var signuppanel= document.getElementById("SignUp_options");
+    function signupcancel()
+    {
+        signuppanel.style.display='none';
+    }
+</script>
+<div id="loginpage" class="modal">
+  
+  <form class="modal-content animate " style="background-color: whitesmoke;" action="#" method="post">
+      <button class="Btn" onclick="logincancel()"><i class="fa fa-close"></i></button>
+      <h1>Login</h1>  
+    <div class="container inputs">
+      <label for="uname"><b>Username</b></label><br>
+      <input type="text" placeholder="Enter Username" name="uname" required><br>
+
+      <label for="psw"><b>Password</b></label><br>
+      <input type="password" placeholder="Enter Password" name="psw" required><br>
+        
+      <label >
+        <input type="checkbox" name="remember"> Remember me
+      </label><br>
+      <button  class="loginbtn" >Login</button>
+    </div><br>
+    <div class="signup"><a href="./SignUp.html" target="_blank" style="color: black;">signup?</a></div><br>
+    <div class="container cancelpanel">
+      <button type="button" onclick="document.getElementById('loginpage').style.display='none'" class="cnclbtn">Cancel</button>
+      <span class="psw" >Forgot <a href="#" >password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+  var model= document.getElementById("loginpage");
+  window.onclick=function(event)
+  {
+      if(event.target==model)
+          model.style.display='none';
+  }
+</script>
+<script>
+  var loginpanel= document.getElementById("loginpage");
+  function logincancel()
+  {
+      loginpanel.style.display='none';
+  }
+  </script>
+    <div class="container-fluid" style=" height: 100px; background-color: #192c55;">
+        <h1 style="color: white; font-family: Arial, Helvetica, sans-serif; margin-left: 140px;"><b>Rent a Car</b></h1>
+  </div>
+    <div class="container-fluid" style="margin-bottom: 30px;">
+        <div class="row">
+            <h3 >Personal Information</h3><hr>
+            <div class="col-sm-2">
+                <label for='fname' style="color: black;">First Name*</label>
+                <input type="text" placeholder="Enter first name" name='fname' required>
+            </div>
+            <div class="col-sm-2">
+                <label for='lname' style="color: black;">Last Name*</label>
+                <input type="text" placeholder="Enter Last name" name='lname' required>
+            </div>
+            <div class="col-sm-2">
+                <label for='phnno' style="color: black;">Phone No*</label>
+                <input type="text" placeholder="Enter phone number"name='phnno'>
+            </div>
+            <div class="col-sm-2" style>
+                <label for='cnic_passport' style="color: black;">CNIC/Passport*</label>
+                <input type="text" placeholder="Enter CNIC/Passport" name='cinc_passport' required>
+            </div>
+            <div class="col-sm-3">
+                <label for='cemail' style="color: black;">Email*</label>
+                <input type="text" placeholder="Enter Email with @......" name='email' required>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-sm-6">
+            <label for='address' style="color: black;">Address</label>
+            <input type="text" placeholder="Enter Email with @......" name='email' required>
+          </div>
+        </div>
+        <div class="row">
+          <hr><h3 >Car Details</h3><hr>
+          <div class="col-sm-2">
+              <label for='car_name' style="color: black;">Car Name</label>
+              <input type="text" placeholder="Car name" name='car_name'>
+          </div>
+          <div class="col-sm-2">
+              <label for='car_model' style="color: black;">Car Model</label>
+              <input type="text" placeholder="Car Model" name='car_model'>
+          </div>
+          <div class="col-sm-2">
+              <label for='car_color' style="color: black;">Color</label>
+              <input type="text" placeholder="Car Color"name='car_color'>
+          </div>
+          <div class="col-sm-2">
+              <label for='driver' style="color: black;">Seats</label>
+              <input type="text" placeholder="With driver or not" name='driver'>
+          </div>
+      </div>
+      <div class="row">
+        <br>
+        <div class="col-sm-2">
+            <label for='Air_conditioning' style="color: black;">Air conditioning</label>
+            <input type="text" placeholder="Air conditioning" name='car_name'>
+        </div>
+        <div class="col-sm-2">
+            <label for='luggage' style="color: black;">Luggage</label>
+            <input type="text" placeholder="Luggage" name='car_model'>
+        </div>
+        <div class="col-sm-2">
+            <label for='transmission' style="color: black;">Transmission</label>
+            <input type="text" placeholder="Transmission"name='car_color'>
+        </div>
+        <div class="col-sm-2">
+            <label for='driver' style="color: black;">With Driver or Not</label>
+            <input type="text" placeholder="With driver or not" name='driver'>
+        </div>
+    </div>
+    <div class="row">
+      <hr><h3 >Documents</h3><hr>
+      <div class="col-sm-2">
+        <label>CNIC/Passport</label>
+      <input type="file" class="filename">
+      </div>
+      <div class="col-sm-2">
+        <label>Driving Licence</label>
+      <input type="file" class="filename">
+      </div>
+      
+  </div>
+
+  </div>
+  <footer style="padding-top: 15px;">
+    <div class="row-sm-1">
+      <div class="col-sm-9"></div>
+      <div class="col-sm-2">
+        <h5 style="margin-top: 15px;">Follow Us</h5>
+        <ul class="list-unstyled list-inline networks primary-lang">
+          <li>
+            <a href="https://www.twitter.com" class="twitter" rel="nofollow" target="_blank" title="Follow Us On Twitter"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com" class="facebook" rel="nofollow" target="_blank" title="Follow Us On Facebook"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="https://plus.google.com" class="googleplus" rel="me" target="_blank" title="Follow Us On Google Plus"><i class="fa fa-google-plus"></i></a>
+          </li>
+          <li>
+            <a href="https://pinterest.com" class="pinterest" rel="nofollow" target="_blank" title="Follow Us On Pinterest"><i class="fa fa-pinterest"></i></a>
+          </li>
+          <li>
+            <a href="https://instagram.com" class="instagram" rel="nofollow" target="_blank" title="Follow Us On Instagram"><i class="fa fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com" class="youtube" rel="me" target="_blank" title="Follow Us On Youtube"><i class="fa fa-youtube"></i></a>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row-sm-1">
+      <div class="col-sm-9"></div>
+      <div class="col-sm-2">
+        <h5 style="margin-top: 15px;">Download Mobile Apps</h5>
+        <a href="#" target="_blank" title="RENTA iOS APP">
+          <img src="./Pictures/app-store-badge-iphone.png" alt="App store badge" height="80" style="margin-top: -15px;">
+        </a>
+        <a href="#" target="_blank" title="RENTA Andriod APP">
+          <img src="./Pictures/google-play-badge-andriod.png" alt="Google play badge" height="40" style="margin-top: -15px;">
+        </a>
+      </div>
+    </div>
+    <hr style="width: 60%;border-top-color: #181c20; box-shadow: 0 1px 0px #464a53;">
+    <p style="text-align:center; color: #767676;">Copyright©2021-2025 RENTA(pvt)Ltd.-All Rights Reserved</p>
+    <div style="text-align:center;">
+      <a href="#" class="terms" >Terms of service |</a>
+      <a href="#"  class="terms">Privacy Policy</a>
+    </div>
+  </footer>    
+
+</body>
+</html>

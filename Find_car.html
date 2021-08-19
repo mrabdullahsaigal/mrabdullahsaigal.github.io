@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find Car</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./FindCar.css" type="text/css" rel="stylesheet">
+    <script src="./Renta_scrips.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="Header-section">
+        <div class="row">
+            <div class="col-md-3">
+                <a href="RENTA.html"><img src="./Pictures/renta.png" alt="RENTA" class="logo"></a>
+            </div>
+            <div class="col-sm-7">
+                <nav class="navbar navbar-default" style="background: none;border: none;padding-top: 10px;">
+                  <div class="container-fluid" style="color: white;background: none;">
+                    <ul class="nav navbar-nav" >
+                      <li>
+                        <div class="dropdown">
+                          <button class="dropbtn"><b>PRODUCTS</b>
+                            <i class="fa fa-caret-down"></i>
+                          </button>
+                          <div class="dropdown-content">
+                            <button class="dropdown-btn">Cars
+                              <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-container">
+                              <a href="./Find_car.html">Find Car</a>
+                              <a href="#" data-toggle="modal" data-target="#SignUp_options">Rent a Car</a>
+                            </div>                        
+                            <a href="#">Houses</a>
+                            <a href="#">Generators</a>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                      <div class="dropdown">
+                          <button class="dropbtn"><b>SERVICES</b>
+                            <i class="fa fa-caret-down"></i>
+                          </button>
+                          <div class="dropdown-content">
+                            <a href="./Find_car.html" target="_self">Man Power</a>
+                            <a href="#">IT service</a>
+                          </div>
+                        </div>
+                      </li>
+                      <li><a href="#" style="color: black;"><b>CONTACT US</b></a></li>
+                      <li><a href="#" style="color: black;"><b>MORE</b></a></li>
+                    </ul>
+                  </div>
+                </nav>
+                <script>
+                  var dropdown = document.getElementsByClassName("dropdown-btn");
+                  var i;
+  
+                  for (i = 0; i < dropdown.length; i++) {
+                    dropdown[i].addEventListener("click", function() {
+                      this.classList.toggle("active");
+                      var dropdownContent = this.nextElementSibling;
+                      if (dropdownContent.style.display === "block") {
+                        dropdownContent.style.display = "none";
+                      } else {
+                        dropdownContent.style.display = "block";
+                      }
+                    });
+                  }
+                </script>
+              </div>
+              <div class="col-sm-2">
+                <div class="btns">
+                  <button onclick="document.getElementById('SignUp_options').style.display='block'" class="register"><b>Signup</b></button>
+                  <button onclick="document.getElementById('loginpage').style.display='block'" class="login"><b>Login</b></button>
+                  
+                </div>
+            </div>
+            <script>
+              var loginmodel= document.getElementById("loginpage");
+             function getloginpanel()
+             {
+                 loginmodel.style.display="block";
+             }
+             
+            </script>
+            <script>
+              var model= document.getElementById("loginpage");
+              window.onclick=function(event)
+              {
+                  if(event.target==model)
+                      model.style.display='none';
+              }
+            </script>
+        </div>      
+    </div>
+    <div id="SignUp_options" class="modal">
+        <form class="modal-content animate "  action="#" method="post">
+            <button class="Btn" onclick="signupcancel()"><i class="fa fa-close"></i></button>
+          <h2 class="signlabel">SignUp<br><br>
+          <img src="./Pictures/signup.jpg" alt="Singup Logo" class="signup_logo"></h2>
+          <div class="container signup-btns" style="width: auto;">
+            <button type="submit" class="indi_signup"  onclick="parent.open('./IndividualSignUp.html')" target="_blank">Individial SignUp</button>
+            <button type="submit" class="Busi_signup"  onclick="parent.open('./BusinessSignup.html')" target="_blank">Business SignUp</button>
+          </div>
+        </form>
+        
+      </div>
+      <script>
+        var signuppanel= document.getElementById("SignUp_options");
+        function signupcancel()
+        {
+            signuppanel.style.display='none';
+        }
+    </script>
+        <div class="container-fluid section">
+            <h3 >Find A Car</h3>
+              <form class="navbar-form navbar-left" action="#">
+                <div class="input-group">
+                  <select id="names" name="carsNames" class="searchlist" >
+                    <option value="all" selected>All Cars</option>
+                    <option value="audi" >Audi</option>
+                    <option value="hondaCity" >Honda City</option>
+                    <option value="hondaCivic" >Honda Civic</option>
+                  </select>  
+                  <select id="names" name="carsNames" class="searchlist">
+                    <option value="all" selected>All Models</option>
+                    <option value="2019" >2019</option>
+                    <option value="2018" >2018</option>
+                    <option value="2017" >2017</option>
+                  </select>   
+                  <select id="names" name="carsNames" class="searchlist" >
+                    <option value="all" selected>All colors</option>
+                    <option value="red" >Red</option>
+                    <option value="white" >White</option>
+                    <option value="gray" >Gray</option>
+                    <option value="blue" >Blue</option>
+                    <option value="orange" >Orange</option>
+                    <option value="red" >Red</option>
+                  </select> 
+                  <select id="names" name="carsNames" class="searchlist" >
+                    <option value="both" selected>Driver Option</option>
+                    <option value="withDriver" >With Driver</option>
+                    <option value="withoutDriver" >Without Driver</option>
+                    
+                  </select>                                             
+                    <div class="input-group-btn">
+                      <button class="btn btn-default" type="submit"  style="outline: none;height:40px; background-color: rgb(228, 70, 70);color: white; border-color: rgb(197, 53, 53); "><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                </div>
+              </form>
+        </div>
+
+<div id="loginpage" class="modal">
+  
+    <form class="modal-content animate " style="background-color: whitesmoke;" action="#" method="post">
+        <button class="Btn" onclick="logincancel()"><i class="fa fa-close"></i></button>
+        <h1>Login</h1>  
+      <div class="container inputs">
+        <label for="uname"><b>Username</b></label><br>
+        <input type="text" placeholder="Enter Username" name="uname" required><br>
+  
+        <label for="psw"><b>Password</b></label><br>
+        <input type="password" placeholder="Enter Password" name="psw" required><br>
+          
+        <label >
+          <input type="checkbox" name="remember"> Remember me
+        </label><br>
+        <button  class="loginbtn" >Login</button>
+      </div>
+      <div class="signup"><a href="./SignUp.html" target="_blank" style="color: black;">signup?</a></div>
+      <div class="container cancelpanel">
+        <button type="button" onclick="document.getElementById('loginpage').style.display='none'" class="cnclbtn">Cancel</button>
+        <span class="psw" >Forgot <a href="#" >password?</a></span>
+      </div>
+    </form>
+</div>
+
+<script>
+    var model= document.getElementById("loginpage");
+    window.onclick=function(event)
+    {
+        if(event.target==model)
+            model.style.display='none';
+    }
+</script>
+<script>
+    var loginpanel= document.getElementById("loginpage");
+    function logincancel()
+    {
+        loginpanel.style.display='none';
+    }
+</script>
+    <div id="detailpage" class="modal" >
+  
+        <div class="container">
+            <div class="container-fluid detailpanel">
+                <h3>42000Rs <h5> rent per day</h5></h3>
+            </div>
+            <div class="container-fluid" style="background-color: whitesmoke;padding-top: 14px;padding-bottom:8px;width: 25%; height:50%">
+                <label style="color:black ; ">Model</label><br><br>
+                <label style="color:black">Color</label><br><br>
+                <label style="color:black">Doors</label><br><br>
+                <label style="color:black">Seats</label><br><br>
+                <label style="color:black">Luggage</label><br><br>
+                <label style="color:black">Air conditioning</label><br><br>
+                <label style="color:black">Transmission</label>
+            </div>
+            <div class="container-fluid detailcancel">
+                <button type="button" onclick="document.getElementById('detailpage').style.display='none'" class="cancelbtn">Cancel</button>
+              </div>
+        </div>
+        
+    </div>
+    <script>
+        var model= document.getElementById("detailpage");
+        window.onclick=function(event)
+        {
+            if(event.target==model)
+                model.style.display='none';
+        }
+        </script>
+         <script>
+            var detailmodel= document.getElementById("detailpage");
+           function getDetails()
+           {
+               detailmodel.style.display="block";
+           }
+           
+            </script>
+<div class="container-fluid picturepanel">
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <div class="container carpictures">                
+                <div class="row-sm-3">
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <a onclick="getDetails()"><img src="./Pictures/48-489861_toyota-fortuner-2019-price-in-pakistan.jpg" alt="Toyota Fortuner" class="imgs"></a>
+                            <div class="container-fluid" style="padding-bottom: 0px;">
+                                <br><h4>Toyota Fortuner</h4>
+                                <h5>32000 PKR</h5>
+                                <button class="proceedbtn" onclick="document.getElementById('loginpage').style.display='block'">Booking</button>
+                                <button class="cartbtn">Add to Cart</button>
+                                <button class="detailbtn" onclick="getDetails()">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <a onclick="getDetails()"><img src="./Pictures/Toyota-Land-Cruiser-200-2020-green-Computer-Wallpaper.jpg" alt="Toyota LandCruiser" class="imgs"></a>
+                            <div class="container-fluid" >
+                                <br><h4>Toyota LandCruiser</h4>
+                                <h5>42000 PKR </h5>
+                                <button class="proceedbtn" onclick="document.getElementById('loginpage').style.display='block'">Booking</button>
+                                <button class="cartbtn">Add to Cart</button>
+                                <button class="detailbtn" onclick="getDetails()" id="myBtn">Details</button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <a onclick="getDetails()"><img src="./Pictures/honda-civic-reborn-sports-cars-wallpapers-10.jpg" alt="HONDA CIVIC Reborn" class="imgs"></a>
+                            <div class="container-fluid">
+                                <br><h4>HONDA CIVIC Reborn</h4>
+                                <h5>12000 PKR</h5>
+                                <button class="proceedbtn" onclick="document.getElementById('loginpage').style.display='block'">Booking</button>
+                                <button class="cartbtn">Add to Cart</button>
+                                <button class="detailbtn"onclick="getDetails()">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <a onclick="getDetails()"><img src="./Pictures/7d08d6d0e2ad85790ebaddd11863d6b2.jpg" alt="HONDA S2000" class="imgs"></a>
+                            <div class="container-fluid">
+                                <br><h4>HONDA S2000</h4>
+                                <h5>52000 PKR</h5>
+                                <button class="proceedbtn" onclick="document.getElementById('loginpage').style.display='block'">Booking</button>
+                                <button class="cartbtn">Add to Cart</button>
+                                <button class="detailbtn"onclick="getDetails()">Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row-sm-3">
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <a onclick="getDetails()"><img src="./Pictures/audi a6.jpg" alt="Audi A6" class="imgs"></a>
+                            <div class="container-fluid">
+                                <br><h4>Audi A6</h4>
+                                <h5>32000 PKR</h5>
+                                <button class="proceedbtn" onclick="document.getElementById('loginpage').style.display='block'">Booking</button>
+                                <button class="cartbtn">Add to Cart</button>
+                                <button class="detailbtn"onclick="getDetails()">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <a onclick="getDetails()"><img src="./Pictures/audi a8.jpg" alt="TAudi A8" class="imgs"></a>
+                            <div class="container-fluid">
+                                <br><h4>Audi A8</h4>
+                                <h5>42000 PKR</h5>
+                                <button class="proceedbtn" onclick="document.getElementById('loginpage').style.display='block'">Booking</button>
+                                <button class="cartbtn">Add to Cart</button>
+                                <button class="detailbtn"onclick="getDetails()">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <a onclick="getDetails()"><img src="./Pictures/audi rs4.png" alt="Audi RS4" class="imgs"></a>
+                            <div class="container-fluid">
+                                <br><h4>Audi RS4</h4>
+                                <h5>12000 PKR</h5>
+                                <button class="proceedbtn" onclick="document.getElementById('loginpage').style.display='block'">Booking</button>
+                                <button class="cartbtn">Add to Cart</button>
+                                <button class="detailbtn"onclick="getDetails()">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <a onclick="getDetails()"><img src="./Pictures/Audi_R8_Rear_End.jpeg" alt="Audi R8" class="imgs"></a>
+                            <div class="container-fluid">
+                                <br><h4>Audi R8</h4>
+                                <h5>52000 PKR</h4>
+                                <button class="proceedbtn" onclick="document.getElementById('loginpage').style.display='block'">Booking</button>
+                                <button class="cartbtn">Add to Cart</button>
+                                <button class="detailbtn"onclick="getDetails()">Details</button>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row-sm-3">
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <a onclick="getDetails()"><img src="./Pictures/honda-br-v.jpg" alt="HONDA Brv" class="imgs"></a>
+                            <div class="container-fluid">
+                                <br><h4>HONDA Brv</h4>
+                                <h5>32000 PKR</h5>
+                                <button class="proceedbtn" onclick="document.getElementById('loginpage').style.display='block'">Booking</button>
+                                <button class="cartbtn">Add to Cart</button>
+                                <button class="detailbtn"onclick="getDetails()"> Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <a onclick="getDetails()"><img src="./Pictures/wp2367491.jpg" alt="HONDA CIVIC Type R" class="imgs"></a>
+                            <div class="container-fluid">
+                                <br><h4>HONDA CIVIC Type R</h4>
+                                <h5>42000 PKR</h5>
+                                <button class="proceedbtn"onclick="document.getElementById('loginpage').style.display='block'">Booking</button>
+                                <button class="cartbtn">Add to Cart</button>
+                                <button class="detailbtn"onclick="getDetails()"> Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <a onclick="getDetails()"><img src="./Pictures/civic-exterior-right-front-three-quarter-148156.jpeg" alt="HONDA CIVIC" class="imgs"></a>
+                            <div class="container-fluid">
+                                <br><h4>HONDA CIVIC</h4>
+                                <h5>12000 PKR</h5>
+                                <button class="proceedbtn" onclick="document.getElementById('loginpage').style.display='block'">Booking</button>
+                                <button class="cartbtn">Add to Cart</button>
+                                <button class="detailbtn"onclick="getDetails()"> Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <a onclick="getDetails()"><img src="./Pictures/Honda-City-eHEV-RS-Thailand-1-e1606211507148.jpg" alt="HONDA City-eHEV RS" class="imgs"></a>
+                            <div class="container-fluid">
+                                <br><h4>HONDA City-eHEV RS</h4>
+                                <h5>52000 PKR</h5>
+                                <button class="proceedbtn" onclick="document.getElementById('loginpage').style.display='block'">Booking</button>
+                                <button class="cartbtn">Add to Cart</button>
+                                <button class="detailbtn"onclick="getDetails()"> Details</button>
+                            </div>
+                        </div>
+                    </div> 
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+</div>
+    
+    
+    <footer style="padding-top: 15px;">
+        <div class="row-sm-1"></div>
+          <div class="col-sm-9"></div>
+          <div class="col-sm-2">
+            <h5 style="margin-top: 15px;">Follow Us</h5>
+            <ul class="list-unstyled list-inline networks primary-lang">
+              <li>
+                <a href="https://www.twitter.com" class="twitter" rel="nofollow" target="_blank" title="Follow Us On Twitter"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com" class="facebook" rel="nofollow" target="_blank" title="Follow Us On Facebook"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="https://plus.google.com" class="googleplus" rel="me" target="_blank" title="Follow Us On Google Plus"><i class="fa fa-google-plus"></i></a>
+              </li>
+              <li>
+                <a href="https://pinterest.com" class="pinterest" rel="nofollow" target="_blank" title="Follow Us On Pinterest"><i class="fa fa-pinterest"></i></a>
+              </li>
+              <li>
+                <a href="https://instagram.com" class="instagram" rel="nofollow" target="_blank" title="Follow Us On Instagram"><i class="fa fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com" class="youtube" rel="me" target="_blank" title="Follow Us On Youtube"><i class="fa fa-youtube"></i></a>
+  
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row-sm-1">
+          <div class="col-sm-9"></div>
+          <div class="col-sm-2">
+            <h5 style="margin-top: 15px;">Download Mobile Apps</h5>
+            <a href="#" target="_blank" title="RENTA iOS APP">
+              <img src="./Pictures/app-store-badge-iphone.png" alt="App store badge" class="iphonepic" height="80" >
+            </a>
+            <a href="#" target="_blank" title="RENTA Andriod APP">
+              <img src="./Pictures/google-play-badge-andriod.png" alt="Google play badge" class="androidpic"height="40">
+            </a>
+          </div>
+        </div>
+        <hr class="footer_underline">
+        <p >Copyright©2021-2025 RENTA(pvt)Ltd.-All Rights Reserved</p>
+        <div style="text-align:center;">
+          <a href="#" class="terms" >Terms of service |</a>
+          <a href="#"  class="terms">Privacy Policy</a>
+        </div>
+      </footer>    
+    <script>
+        function myFunction()
+        {
+            var dots=document.getElementById("dots");
+            var moreData=document.getElementById("more");
+            var btn=document.getElementById("mtBtn");
+
+            if(dots.style.display==='none')
+            {
+                dots.style.display='inline';
+                btn.innerHTML='Read more';
+                moreData.style.display='none';
+            }
+            else
+            {   
+                dots.style.display='none';
+                btn.innerHTML='Read less';
+                moreData.style.display='inline';
+
+            }
+        }
+    </script>
+</body>
+</html>

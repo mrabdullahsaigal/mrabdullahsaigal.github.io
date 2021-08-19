@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>RENTA</title>
+<link  rel="shortcut icon" type="image/png" href="./Pictures/favicon.png"  sizes="192x192">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="./styles.css" type="text/css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script>
+    var model= document.getElementById("loginpage");
+    window.onclick=function(event)
+    {
+        if(event.target==model)
+            model.style.display='none';
+    }
+    </script>
+</head>
+
+<body>
+  <div class="icon-bar">
+    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+    <a href="#" class="google"><i class="fa fa-google"></i></a>
+    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+    <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+  </div>
+      <div class="Header-section" >
+       <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3">
+              <a href="./RENTA.html"><img src="./Pictures/renta.png" alt="logo" class="logo"></a>
+            </div>
+            <div class="col-sm-6">
+              <nav class="navbar navbar-default" style="background: none;border: none;padding-top: 10px;">
+                <div class="container-fluid" style="color:#1a4666;background:#1a4666;">
+                  <ul class="nav navbar-nav" >
+                    <li>
+                      <div class="dropdown">
+                        <button class="dropbtn"><b>PRODUCTS</b>
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <button class="dropdown-btn">Cars
+                            <i class="fa fa-caret-down"></i>
+                          </button>
+                          <div class="dropdown-container">
+                            <a href="./Find_car.html">Find Car</a>
+                            <a href="./RentACar.html">Rent a Car</a>
+                          </div>
+                          <a href="#">Houses</a>
+                          <a href="#">Generators</a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                    <div class="dropdown">
+                        <button class="dropbtn"><b>SERVICES</b>
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="./Find_car.html" target="_self">Man Power</a>
+                          <a href="#">IT service</a>
+                        </div>
+                      </div>
+                    </li>
+                    <li><a href="#" style="color: white;float: right"><b>CONTACT US</b></a></li>
+                    <li><a href="#" style="color: white;float: right"><b>MORE</b></a></li>
+                  </ul>
+                </div>
+              </nav>
+              <script>
+                var dropdown = document.getElementsByClassName("dropdown-btn");
+                var i;
+
+                for (i = 0; i < dropdown.length; i++) {
+                  dropdown[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var dropdownContent = this.nextElementSibling;
+                    if (dropdownContent.style.display === "block") {
+                      dropdownContent.style.display = "none";
+                    } else {
+                      dropdownContent.style.display = "block";
+                    }
+                  });
+                }
+              </script>
+            </div>
+            <div class="col-sm-3">
+              <div class="btns">
+                <button onclick="document.getElementById('SignUp_options').style.display='block'" class="register"><b>Signup</b></button>
+                <button onclick="document.getElementById('loginpage').style.display='block'" class="login"><b>Login</b></button>
+
+              </div>
+          </div>
+          <script>
+            var loginmodel= document.getElementById("loginpage");
+           function getloginpanel()
+           {
+               loginmodel.style.display="block";
+           }
+
+          </script>
+          <script>
+            var model= document.getElementById("loginpage");
+            window.onclick=function(event)
+            {
+                if(event.target==model)
+                    model.style.display='none';
+            }
+            </script>
+          <br><br><br>
+
+          <br><br><br><br><br>
+  <h1 style="text-align: center;    font-weight: bolder; color: green;"> WEBSITE IS UPDATING PLEASE WAIT...... </h1>
+          <div class="row">
+            <div class="col-sm-3"></div>
+
+            <div class="col-sm-6">
+
+              <div class="container-fluid" style="padding-bottom: 8px;padding-right: 0px; color: white;">
+
+                <h1 style="text-align: center; ">Find Product</h1>
+                <p style="text-align: center;    display: block;
+                          margin-block-start: -1em;
+                          margin-block-end: 1em;
+                          margin-inline-start: 0px;
+                          margin-inline-end: 0px;">From many of RENTA products</p><br>
+                  <form class="navbar-form navbar-left" action="#">
+                    <div class="input-group">
+                      <select id="names" name="carsNames" class="searchlist" >
+                        <option value="all" selected>All Products</option>
+                        <option value="audi" >Cars</option>
+                      </select>
+                      <select id="names" name="carsNames" class="searchlist">
+                        <option value="all" selected>All Citys</option>
+                        <option value="audi" >Lahore</option>
+                        <option value="hondaCity" >Islamabad</option>
+                        <option value="hondaCivic" >Faisalabad</option>
+                      </select>
+                      <select id="names" name="carsNames" class="searchlist" >
+                        <option value="all" selected>All Price Range</option>
+                        <option value="audi" >Low Range</option>
+                        <option value="hondaCity" >Middle Range</option>
+                        <option value="hondaCivic" >High Range</option>
+                      </select>
+                        <div class="input-group-btn">
+                          <button class="btn btn-default" type="submit"  style="outline: none;height:40px; background-color: rgb(228, 70, 70);color: white; border-color: rgb(197, 53, 53); "><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                  </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3"></div>
+          </div>
+      </div>
+      </div>
+    </div>
+        <div id="loginpage" class="modal">
+
+            <form class="modal-content animate " style="background-color: whitesmoke;" action="#" method="post">
+              <button class="Btn" onclick="logincancel()"><i class="fa fa-close"></i></button>
+              <div class="imgcontainer">
+                <h1 style=" text-align: center; background-color: whitesmoke;color: black;">Login</h1>
+              </div>
+
+              <div class="container" style="background-color: whitesmoke; width: auto; color: black;">
+                <label for="uname"><b>Username</b></label><br>
+                <input type="text" placeholder="Enter Username" name="uname" required><br>
+
+                <label for="psw"><b>Password</b></label><br>
+                <input type="password" placeholder="Enter Password" name="psw" required><br>
+
+                <label>
+                  <input type="checkbox" name="remember" > Remember me
+                </label><br>
+                <button type="submit" class="loginbtn"  >Login</button>
+              </div>
+              <div class="signup"><a href="./SignUp.html" target="_blank" style="color: black;">signup?</a></div>
+              <div class="container" style="background-color :rgb(223, 221, 221); width: auto;">
+                <button type="button" onclick="document.getElementById('loginpage').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw" style="color: black;">Forgot <a href="#" style="color: black;">password?</a></span>
+              </div>
+            </form>
+        </div>
+        <script>
+          var loginpanel= document.getElementById("loginpage");
+          function logincancel()
+          {
+              loginpanel.style.display='none';
+          }
+      </script>
+      <div id="SignUp_options" class="modal">
+        <form class="modal-content animate " style="background-color: whitesmoke;" action="#" method="post">
+          <button class="Btn" onclick="signupcancel()"><i class="fa fa-close"></i></button>
+          <h2 class="signlabel">SignUp<br><br>
+          <img src="./Pictures/signup.jpg" alt="Singup Logo" class="signup_logo"></h2>
+          <div class="container signup-btns" style="width: auto;">
+            <button type="submit" class="indi_signup"  onclick="parent.open('./IndividualSignUp.html')" target="_blank">Individial SignUp</button>
+            <button type="submit" class="Busi_signup"  onclick="parent.open('./BusinessSignup.html')" target="_blank">Business SignUp</button>
+          </div>
+        </form>
+
+      </div>
+      <script>
+        var signuppanel= document.getElementById("SignUp_options");
+        function signupcancel()
+        {
+            signuppanel.style.display='none';
+        }
+    </script>
+
+        <div id="detailpage" class="modal">
+
+          <div class="container">
+              <div class="container-fluid" style="background-color: #192c55; width: 30%; height:50%">
+                  <h3 style="color:white ;display: inline-block;">42000Rs <h5 style="display: inline-block;padding-left: 8px;"> rent per day</h5></h3>
+              </div>
+              <div class="container-fluid" style="background-color: whitesmoke;padding-top: 14px;width: 30%; height:320px;margin: auto;">
+                  <label>Model</label><br><br>
+                  <label >Color</label><br><br>
+                  <label >Doors</label><br><br>
+                  <label >Seats</label><br><br>
+                  <label >Luggage</label><br><br>
+                  <label >Air conditioning</label><br><br>
+                  <label >Transmission</label>
+              </div>
+              <div class="container-fluid" style="background-color :rgb(223, 221, 221);width: 30%; height:50%;">
+                  <button type="button" onclick="document.getElementById('detailpage').style.display='none'" class="cnclbtn">Cancel</button>
+                </div>
+          </div>
+
+      </div>
+      <script>
+          var model= document.getElementById("detailpage");
+          window.onclick=function(event)
+          {
+              if(event.target==model)
+                  model.style.display='none';
+          }
+          </script>
+           <script>
+              var detailmodel= document.getElementById("detailpage");
+             function getDetails()
+             {
+                 detailmodel.style.display="block";
+             }
+
+              </script>
+
+
+
+
+
+          <div class="container-fluid" style="  background :whitesmoke;padding-top: 50px;">
+            <div class="row" style="background-color: white;">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+                  <div class="slideshow-container" style="margin-bottom: -20px;">
+                    <div class="mySlides fade">
+                      <img class=" slidesimgs" src="./Pictures/e74f2fc4fea029e026837eb34b5ae6b8.jpg" >
+                    </div>
+                    <div class="mySlides fade">
+                      <img class=" slidesimgs"src="./Pictures/f76c2af8a2e6bece4ca032912a39a19f.jpg" >
+                    </div>
+                    <div class="mySlides fade">
+                      <img class=" slidesimgs"src="./Pictures/honda-civic-reborn-sports-cars-wallpapers-10.jpg" >
+                    </div>
+                    <div class="mySlides fade">
+                      <img class=" slidesimgs"src="./Pictures/7d08d6d0e2ad85790ebaddd11863d6b2.jpg" >
+                    </div>
+                    <div class="mySlides fade">
+                      <img class=" slidesimgs"src="./Pictures/48-489861_toyota-fortuner-2019-price-in-pakistan.jpg">
+                    </div>
+                    <div class="mySlides fade">
+                      <img class=" slidesimgs"src="./Pictures/photo-1565043666747-69f6646db940.jpg">
+                    </div>
+                    <div style="text-align: center;">
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                    </div>
+
+              </div>
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+          </div>
+          <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides()
+            {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}
+                for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+        </script>
+
+        <div class="container-fluid" style="  background :whitesmoke;">
+          <div class="row" style="background-color: white;">
+              <div class="col-sm-1"></div>
+              <div class="col-sm-10">
+                  <div class="container" style="background-color: white; width: 100%; margin-top:4px; margin-bottom: 2px; ">
+                      <div class="row-sm-3">
+                          <div class="col-sm-3">
+                              <div class="card">
+                                <a onclick="getDetails()"><img src="./Pictures/48-489861_toyota-fortuner-2019-price-in-pakistan.jpg" alt="Toyota Fortuner" class="imgs"></a>
+                                <div class="top-left">New Edition</div>
+                                  <div class="container-fluid" style="padding-bottom: 0px;">
+                                      <h4>Toyota Fortuner</h4>
+                                      <h5>32000 PKR</h5>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-sm-3">
+                              <div class="card">
+                                <a onclick="getDetails()"><img src="./Pictures/Toyota-Land-Cruiser-200-2020-green-Computer-Wallpaper.jpg" alt="Toyota LandCruiser" class="imgs"></a>
+                                <div class="top-left">New Edition</div>
+                                <div class="container-fluid" >
+
+                                      <h4>Toyota LandCruiser</h4>
+                                      <h5>42000 PKR </h5>
+
+
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-sm-3">
+                              <div class="card">
+                                <div class="top-left">Brand New</div>
+                                <a onclick="getDetails()"><img src="./Pictures/honda-civic-reborn-sports-cars-wallpapers-10.jpg" alt="HONDA CIVIC Reborn" class="imgs"></a>
+                                  <div class="container-fluid">
+                                      <h4>HONDA CIVIC Reborn</h4>
+                                      <h5>12000 PKR</h5>
+
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-sm-3">
+                              <div class="card">
+                                <a onclick="getDetails()"><img src="./Pictures/7d08d6d0e2ad85790ebaddd11863d6b2.jpg" alt="HONDA S2000" class="imgs"></a>
+                                <div class="top-left">Limited Edition</div>
+                                <div class="container-fluid">
+                                      <h4>HONDA S2000</h4>
+                                      <h5>52000 PKR</h5>
+
+                                  </div>
+                              </div>
+                          </div>
+
+                      </div>
+
+                      <div class="row-sm-3">
+                          <div class="col-sm-3">
+                              <div class="card">
+                                <a onclick="getDetails()"><img src="./Pictures/audi a6.jpg" alt="Audi A6" class="imgs"></a>
+                                <div class="top-left">Limited Edition</div>
+                                <div class="container-fluid">
+                                      <h4>Audi A6</h4>
+                                      <h5>32000 PKR</h5>
+
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-sm-3">
+                              <div class="card">
+                                <a onclick="getDetails()"><img src="./Pictures/audi a8.jpg" alt="TAudi A8" class="imgs"></a>
+                                <div class="top-left">On Sale</div>
+                                <div class="container-fluid">
+                                      <h4>Audi A8</h4>
+                                      <h5>42000 PKR</h5>
+
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-sm-3">
+                              <div class="card">
+                                <a onclick="getDetails()"><img src="./Pictures/audi rs4.png" alt="Audi RS4" class="imgs"></a>
+                                <div class="top-left">New Edition</div>
+                                <div class="container-fluid">
+                                      <h4>Audi RS4</h4>
+                                      <h5>12000 PKR</h5>
+
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-sm-3">
+                              <div class="card">
+                                <a onclick="getDetails()"><img src="./Pictures/Audi_R8_Rear_End.jpeg" alt="Audi R8" class="imgs"></a>
+                                <div class="top-left">Brand New</div>
+                                <div class="container-fluid">
+                                      <h4>Audi R8</h4>
+                                      <h5>52000 PKR</h4>
+
+                                  </div>
+                              </div>
+                          </div>
+
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-1"></div>
+          </div>
+      </div>
+        <script>
+          var model= document.getElementById("loginpage");
+          window.onclick=function(event)
+          {
+              if(event.target==model)
+                  model.style.display='none';
+          }
+          </script>
+
+          <footer>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-2">
+                <h4>Cars By City</h4>
+                <ul>
+                  <a >Cars in Lahore</a><br>
+                  <a >Cars in Karachi</a><br>
+                  <a >Cars in Faislabad</a><br>
+                  <a >Cars in Multan</a><br>
+                  <a >Cars in Sialkot</a><br>
+                  <a >Cars in Peshawar</a><br>
+                  <a >Cars in Islamabad</a>
+                </ul>
+              </div>
+              <div class="col-md-2">
+                <h4>Cars By Color</h4>
+                <ul>
+                  <a >Cars in Red</a><br>
+                  <a >Cars in blue</a><br>
+                  <a >Cars in Grey</a><br>
+                  <a >Cars in white</a><br>
+                  <a >Cars in Black</a><br>
+                  <a >Cars in Silver</a><br>
+                  <a >Cars in Gold</a>
+                </ul>
+              </div>
+              <div class="col-md-2">
+                <h4>RENTA.com</h4>
+                <ul>
+                  <a >RENTA Products</a><br>
+                  <a >About Us</a><br>
+                  <a >Careers</a><br>
+                  <a >Advertise with us</a><br>
+                  <a >Refunds</a><br>
+                  <a >FAQs</a><br>
+                  <a >Contact Us</a>
+                </ul>
+              </div>
+              <div class="col-md-2">
+                <h5 style="margin-top: 15px;">Follow Us</h5>
+                <ul class="list-unstyled list-inline networks primary-lang">
+                  <li>
+                    <a href="https://www.twitter.com" class="twitter" rel="nofollow" target="_blank" title="Follow Us On Twitter"><i class="fa fa-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://www.facebook.com" class="facebook" rel="nofollow" target="_blank" title="Follow Us On Facebook"><i class="fa fa-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://plus.google.com" class="googleplus" rel="me" target="_blank" title="Follow Us On Google Plus"><i class="fa fa-google-plus"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://pinterest.com" class="pinterest" rel="nofollow" target="_blank" title="Follow Us On Pinterest"><i class="fa fa-pinterest"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://instagram.com" class="instagram" rel="nofollow" target="_blank" title="Follow Us On Instagram"><i class="fa fa-instagram"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://www.youtube.com" class="youtube" rel="me" target="_blank" title="Follow Us On Youtube"><i class="fa fa-youtube"></i></a>
+
+                  </li>
+                </ul>
+                </div>
+              <div class="col-md-2"></div>
+            </div>
+              <div class="row">
+                  <div class="col-md-2"></div>
+                <div class="col-md-2">
+                  <h4>Cars By Category</h4>
+                  <ul>
+                    <a >Japanese Cars</a><br>
+                    <a >Imported Cars</a><br>
+                    <a >Automatic Cars</a><br>
+                    <a >4x4 Cars</a><br>
+                    <a >600cc Cars</a><br>
+                    <a >1000cc Cars</a>
+                  </ul>
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-2"></div>
+                  <div class="col-md-2">
+                    <div>
+                     <h5>Download Mobile Apps</h5>
+                          <a href="#" target="_blank" title="RENTA iOS APP">
+                            <img src="./Pictures/app-store-badge-iphone.png" alt="App store badge" height="80" style="margin-top: -15px;">
+                          </a>
+                          <a href="#" target="_blank" title="RENTA Andriod APP">
+                            <img src="./Pictures/google-play-badge-andriod.png" alt="Google play badge" height="40" style="margin-top: -15px;">
+                          </a>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="col-md-2"></div>
+              </div>
+              <div class="row">
+              <hr style="width: 60%;border-top-color: #181c20; box-shadow: 0 1px 0px #464a53;">
+              <p style="text-align:center; color: #767676;">Copyright©2021-2025 RENTA(pvt)Ltd.-All Rights Reserved</p>
+              <div style="text-align:center;">
+                <a href="#" class="terms" >Terms of service |</a>
+                <a href="#"  class="terms">Privacy Policy</a>
+              </div>
+            </div>
+          </footer>
+
+</body>
+</hmtl>

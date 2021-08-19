@@ -1,0 +1,633 @@
+html
+{ 
+    box-sizing: border-box;
+}
+body
+{
+    margin: 0;
+}
+.Header-section
+{
+  background: white;
+    color: black;
+    margin: 0;
+    padding: 30px;
+    height: 110px;
+}
+.fa-caret-down
+{
+  padding-left: 7px;
+  padding-top: 1px;
+}
+.register
+{
+  width: auto;
+  color:white;
+  outline: none;
+  background:none;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  float: right; 
+  background-color: rgb(228, 70, 70);
+}
+.login
+{
+  width: auto;
+  color:white;
+  outline: none;
+  background-color: rgb(228, 70, 70);
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  float: right;
+}
+
+.dropdown-content a:active 
+{
+  text-decoration: none;
+  background-color: #192c55;
+  color:white;
+}
+.dropdown-content a:link
+{
+  text-decoration: none;
+  background-color: #192c55;
+  color:white;
+}
+.dropdown-content a:visited 
+{
+  text-decoration: none;
+  background-color: #192c55;
+  color:white;
+}
+.dropdown-container {
+  display: none;
+  background-color: #192c55;
+  padding-left: 7px;
+}                                                     
+.dropdown .dropbtn {
+  font-size: 14px;  
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.dropdown-btn
+{
+  font-size: 14px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  width:100%;
+  text-align: left; 
+}
+.fa-caret-down
+{
+  float: right;
+  padding-right: 6px;
+}
+.section{
+  background-color: #192c55; 
+  height:auto;
+}
+.input-group
+{
+ position: relative;
+ left: 35%;
+}
+.signup_logo
+{
+  width:80px;
+  height: 50px;
+  background: none;
+  align-items: center;
+}
+.indi_signup
+{
+  width: 100%;
+  background-color: rgb(233, 75, 75);
+   color: white;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   padding: 12px 20px;
+  margin: 8px 0;
+}
+.Busi_signup
+{
+  width: 100%;
+  background-color: rgb(233, 75, 75);
+   color: white;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   padding: 12px 20px;
+  margin: 8px 0;
+}
+.login:hover , .register:hover{
+  background-color:rgb(197, 53, 53);
+}
+.signup {
+  margin-left: 13px;
+  margin-top: -12px;
+  font-size: 15px;
+}
+.signlabel
+{
+  text-align: center;
+}
+.container-fluid h3
+{
+  padding: 6px;font:large;
+  text-align: center;
+}
+.modal-content .cancelpanel
+{
+  background-color :rgb(223, 221, 221); width: auto;
+}
+.modal-content span{
+  color: black;
+}
+.modal-content span a{
+  color: blue;
+}
+.detailpanel
+{
+  background-color: #192c55; width: 25%; height:50%;
+}
+.detailpanel h3
+{
+  color:white ;display: inline-block;
+}
+.detailpanel h5
+{
+  display: inline-block;padding-left: 8px;
+}
+.detailcancel
+{
+  background-color :rgb(223, 221, 221);width: 25%; height:50%;
+}
+.picturepanel
+{
+  background :whitesmoke;
+}
+.picturepanel .carpictures
+{
+  background-color: #333333; width: 100%; margin-top:4px; margin-bottom: 2px;
+}
+.iphonepapp
+{
+  margin-top: -15px;
+}
+.androidpapp
+{
+  margin-top: -15px;
+}
+.footer_underline{
+  width: 60%;border-top-color: #181c20; box-shadow: 0 1px 0px #464a53;
+}
+p{
+  text-align:center; color: #767676;
+}
+.searchlist
+{
+  background-color:#f7ecec;
+  outline: none; 
+  color: #7e7e7e;
+  margin-top: 0px;
+  width:183px; 
+  height:40px; 
+  border-color:#c1c1c1 ; 
+  margin-left:-2px;
+  padding: 4px;
+}
+.Btn{
+  float: right;
+  background: none;
+  border:none;
+  padding:12px 16px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.signup_btns
+{
+  width: auto;
+}
+.animate
+{
+  background-color: whitesmoke;
+}
+.modal-content h1
+{
+  text-align: center; background-color: whitesmoke;color: black;
+}
+.modal-content .inputs
+{
+  background-color: whitesmoke; width: auto; color: black;
+}
+.modal-content label
+{
+  color: black;
+}
+.modal-content a
+{
+  color: black;
+}
+.dropdown:hover .dropbtn {
+  background-color: rgb(228, 70, 70);
+}
+.dropdown-btn:hover
+{
+  background-color: rgb(228, 70, 70);
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  color: white;
+  background-color: #192c55;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px #222222;
+  z-index: 1;
+}
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  background-color: #192c55;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover {
+  background-color:rgb(228, 70, 70);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+label
+{
+    color: white;
+}
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 0; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: white;
+  margin: 2% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #222222;
+  width:30%; 
+}
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: rgb(228, 70, 70);
+  outline:none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.loginbtn
+{
+  width: 100%;
+  background-color: rgb(233, 75, 75);
+   color: white;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   padding: 12px 20px;
+  margin: 8px 0;
+}
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+
+}
+.signup {
+  margin-left: 13px;
+  margin-top: -12px;
+  font-size: 15px;
+}
+.hidden
+{
+  visibility: hidden;
+}
+.logo
+{
+    width:190px;
+    height: 110px;
+    padding: 0;
+    margin-top: -22px;
+    
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  h1,h2{
+      font-size: large;
+      color: white;
+  }
+  
+.column {
+    float: left;
+    width: 25%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+  .row-sm
+  {
+    background-color: #192c55;
+  }
+  .outerblock
+  {
+    background-color: white;
+  }
+  .imgs{
+    width: 100%;height:55%; 
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  .card {
+    background: rgba(27, 40, 59, 0.8);
+    margin-top: 8px;
+    font-size: smaller;
+    height: 270px;
+    border-radius: 15px;
+  }
+ 
+  .container-fluid{
+    padding: 0 10px;
+    height: 100%;
+    color: white;
+    
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  
+  .title {
+    color: grey;
+  }
+
+  .proceedbtn {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 4px;
+    color: white;
+    background-color: rgb(228, 70, 70);
+    text-align: center;
+    cursor: pointer;
+    width: auto;
+    margin-bottom: 10px;
+  }
+ 
+  .detailbtn {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 4px;
+    color: white;
+    background-color: rgb(228, 70, 70);
+    text-align: center;
+    cursor: pointer;
+    width: auto;
+    margin-bottom: 10px;
+  }
+  .cartbtn{
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 4px;
+    color: white;
+    background-color: rgb(228, 70, 70);
+    text-align: center;
+    cursor: pointer;
+    width: auto;
+    margin-bottom: 10px;
+  }
+  
+  .cartbtn:hover ,.proceedbtn:hover,.detailbtn:hover {
+    background-color: #555;
+  }
+  .cnclbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: rgb(228, 70, 70);
+    outline:none;
+    border: none;
+    cursor: pointer;
+    color: white;
+  }
+  .cancelbtn {
+    width: 100%;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    background-color: rgb(228, 70, 70);
+    outline:none;
+    border: none;
+    cursor: pointer;
+    color: white;
+  }
+.model
+{
+    background-color: rgb(228, 70, 70);
+    padding: 10px;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.submitbtn:hover
+{
+    background-color: black;
+}
+
+
+.networks li a .fa {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  text-align: center;
+  margin-left: 0;
+  margin-right: 0;
+  vertical-align: top;
+}
+
+.twitter:hover
+{
+  background-color: #00ACED;
+  color: white;
+}
+.instagram:hover
+{
+  background-color: #e95950;
+  color: white;
+}
+.facebook:hover
+{
+  background-color: blue;
+  color: white;
+}
+.youtube:hover
+{
+  background-color: #cd201f;
+  color: white;
+}
+.googleplus:hover
+{
+  background-color: #dd4b39;
+  color: white;
+}
+.pinterest:hover
+{
+  background-color: #bd081c;
+  color: white;
+} 
+
+.networks *, .networks *:after, .networks *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+[class^="fa-"], [class*=" fa-"] {
+  font-family: 'FontAwesomeCustom';
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.networks li a {
+  -webkit-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+  border-radius: 50%;
+  background: #999;
+  color: #4d4d4d;
+  display: block;
+  padding: 7px;
+}
+
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+}
+.networks li {
+  float: left;
+  margin: 0 4px;
+  line-height: 16px;
+  padding: 3px;
+}
+li {
+  text-align: -webkit-match-parent;
+}
+hr{
+  width: auto;
+  border-top-color: rgb(212, 202, 202); 
+  box-shadow: 0 1px 0px rgb(212, 202, 202);
+  padding-bottom:-13px;
+  padding-top:-13px;
+}
+label{
+  padding-top:4px;
+}
+.primary-lang {
+  direction: ltr;
+  line-height: 20px;
+  font-family: 'Lato', sans-serif;
+}
+.networks {
+  font-size: 15px;
+  margin: 0 -4px;
+}
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+  margin-left: -5px;
+}
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+ul {
+  padding-left: 0;
+  list-style: none;
+  list-style-type: disc;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+}
+
+footer
+{
+  height:400px;
+  color: white;
+  padding: 3px;
+  background-color:#192c55;
+}
+a.terms ,a.terms :hover,a.terms :link,a.terms :visited
+{
+  color: #767676;
+}
+.terms a:active
+{
+  color: white;
+}
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+    .model
+    {
+        width: auto;
+    }
+    
+    
+  }
